@@ -1,0 +1,30 @@
+{
+    "name": "kennybaustert/groundskeeper",
+    "description": "WP-CLI commands for bulk imports, cleanup and site reports.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Kenny Baustert"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.1"
+    },
+    "autoload": {
+        "files": [
+            "groundskeeper.php"
+        ]
+    },
+    "scripts": {
+        "lint": "phpcs"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
