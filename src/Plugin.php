@@ -1,6 +1,7 @@
 <?php
 namespace Groundskeeper;
 
+use Groundskeeper\Commands\CleanupCommand;
 use Groundskeeper\Commands\ImportCommand;
 use Groundskeeper\Commands\GroundskeeperNamespace;
 use WP_CLI;
@@ -15,6 +16,7 @@ final class Plugin {
 		foreach ( array( 'groundskeeper', 'gk' ) as $root ) {
 			WP_CLI::add_command( $root, GroundskeeperNamespace::class );
 			WP_CLI::add_command( "{$root} import", ImportCommand::class );
+			WP_CLI::add_command( "{$root} cleanup", CleanupCommand::class );
 		}
 	}
 }
