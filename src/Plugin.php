@@ -3,6 +3,7 @@ namespace Groundskeeper;
 
 use Groundskeeper\Commands\CleanupCommand;
 use Groundskeeper\Commands\ImportCommand;
+use Groundskeeper\Commands\ReportCommand;
 use Groundskeeper\Commands\GroundskeeperNamespace;
 use WP_CLI;
 
@@ -17,6 +18,7 @@ final class Plugin {
 			WP_CLI::add_command( $root, GroundskeeperNamespace::class );
 			WP_CLI::add_command( "{$root} import", ImportCommand::class );
 			WP_CLI::add_command( "{$root} cleanup", CleanupCommand::class );
+			WP_CLI::add_command( "{$root} report", ReportCommand::class );
 		}
 	}
 }
