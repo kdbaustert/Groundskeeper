@@ -377,13 +377,15 @@ class CleanupCommand extends BaseCommand {
 	private function clean_comments( $status, $days ) {
 		global $wpdb;
 
-		$ids = $wpdb->get_col(
-			$wpdb->prepare(
-				"SELECT comment_ID FROM {$wpdb->comments} WHERE comment_approved = %s AND comment_date_gmt < %s",
-				$status,
-				$this->days_ago_gmt( $days )
-			)
-		);
+		$sql = $wpdb->prepare( "SELECT comment_ID FROM {$wpdb->comments} WHERE comment_approved = %s", $status );
+
+		// With no age limit, skip the date check so comments from this very
+		// second aren't missed.
+		if ( $days > 0 ) {
+			$sql .= $wpdb->prepare( ' AND comment_date_gmt < %s', $this->days_ago_gmt( $days ) );
+		}
+
+		$ids = $wpdb->get_col( $sql );
 
 		return $this->delete_ids(
 			ucfirst( $status ) . ' comments',
