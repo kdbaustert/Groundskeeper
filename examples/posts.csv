@@ -1,0 +1,5 @@
+import_id,title,content,excerpt,status,date,author,categories,tags,featured_image,meta:source_url,meta:reading_time
+news-001,Spring open house announced,"<p>Join us on <strong>April 12</strong> for tours and demos.</p>",Tours and demos on April 12.,publish,2026-03-01 09:00,admin,News > Events,open house|events,images/hero.jpg,https://example.com/a/1,3
+news-002,"New hours, starting May",<p>We're open later on Thursdays.</p>,,publish,2026-04-15,admin,News,hours,,https://example.com/a/2,1
+news-003,Draft: summer schedule,<p>Coming soon.</p>,,draft,,admin,Announcements,,,,
+news-004,Bad author row,<p>Should fail.</p>,,publish,,nobody-here,News,,,,

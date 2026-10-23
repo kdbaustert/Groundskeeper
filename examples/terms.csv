@@ -1,0 +1,5 @@
+taxonomy,name,slug,parent,description,meta:color
+category,Local,local,regional,Local stories,#2a6
+category,Regional,regional,,Regional coverage,#26a
+post_tag,Featured,featured,,Editor picks,
+category,Orphan child,orphan-child,does-not-exist,,

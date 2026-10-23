@@ -1,0 +1,4 @@
+[
+  { "import_id": "page-about", "post_type": "page", "title": "About us", "slug": "about", "content": "<p>Who we are.</p>", "status": "publish", "menu_order": 1 },
+  { "import_id": "page-team", "post_type": "page", "title": "Our team", "slug": "team", "parent": "about", "content": "<p>The people.</p>", "status": "publish", "meta": { "subtitle": "Meet everyone", "contacts": ["a@example.com", "b@example.com"] } }
+]

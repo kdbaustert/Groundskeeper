@@ -1,0 +1,5 @@
+user_email,user_login,first_name,last_name,display_name,role,meta:department
+jane@example.com,jane,Jane,Doe,Jane Doe,editor,Marketing
+sam@example.com,,Sam,Lee,Sam Lee,author,Sales
+not-an-email,,Bad,Row,,subscriber,
+jane@example.com,jane2,Dup,Row,,subscriber,
